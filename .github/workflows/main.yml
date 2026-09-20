@@ -27,10 +27,10 @@ jobs:
           cache-disabled: true
 
       - name: Build NineCrowns
-        run: gradle build
+        run: gradle -p NineCrowns-26.1-v1.2.0 build
 
       - name: Upload mod JAR
         uses: actions/upload-artifact@v4
         with:
           name: NineCrowns-26.1
-          path: build/libs/*.jar
+          path: NineCrowns-26.1-v1.2.0/build/libs/*.jar
